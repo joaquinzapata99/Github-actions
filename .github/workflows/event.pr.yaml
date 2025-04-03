@@ -25,4 +25,4 @@ jobs:
 
       - name: Run security checks
         run: |
-          bandit -r code/python/app.py
+          bandit -r code/python
