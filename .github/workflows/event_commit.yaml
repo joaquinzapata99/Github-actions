@@ -6,7 +6,7 @@ on:
       - '*'
   workflow_dispatch:
     inputs:
-      name:
+      debug_mode:
         description: 'Name'
         required: true
         default: 'World'
@@ -28,4 +28,4 @@ jobs:
       - name: first-step
         run: echo "hello world!"
       - name: second-step
-        run: echo ${{ github.event.inputs.name }}
+        run: echo ${{ github.event.debug_mode }}
