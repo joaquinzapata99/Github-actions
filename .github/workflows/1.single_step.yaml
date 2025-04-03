@@ -17,4 +17,4 @@ jobs:
 
     steps:
       - name: First step2
-        run: echo "Hello world!"
+        run: echo "bye world!"
