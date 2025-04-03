@@ -28,4 +28,4 @@ jobs:
       - name: first-step
         run: echo "hello world!"
       - name: second-step
-        run: echo ${{ github.event.inputs.sample_value }}
+        run: echo ${{ github.event.inputs.debug_mode }}
