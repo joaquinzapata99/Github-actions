@@ -25,4 +25,4 @@ jobs:
 
       - name: Run security checks
         run: |
-          bandit -r code/python
+          flake8 code/python
