@@ -6,15 +6,12 @@ on:
 jobs:
   hello-world:
     runs-on: ubuntu-latest
-
     steps:
       - name: First step
         run: echo "Hello world!"
 
-jobs:
   hello-world2:
     runs-on: ubuntu-latest
-
     steps:
       - name: First step2
         run: echo "bye world!"
