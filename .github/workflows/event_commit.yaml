@@ -4,28 +4,28 @@ on:
   push:
     branches:
       - '*'
-    workflow_dispatch:
+  workflow_dispatch:
     inputs:
       name:
-      description: 'Name'
-      required: true
-      default: 'World'
-    greeting:
-      description: 'Greeting'
-      required: true
-      default: 'Hello'
+        description: 'Name'
+        required: true
+        default: 'World'
+      greeting:
+        description: 'Greeting'
+        required: true
+        default: 'Hello'
 
 jobs:
   hello-world:
     runs-on: ubuntu-latest
-
     steps:
       - name: First step
         run: echo "Hello world!"
+
   new-job:
     runs-on: ubuntu-latest
     steps:
       - name: first-step
         run: echo "hello world!"
       - name: second-step
-        run: echo ${{ github.event.inputs.debug_mode }}
+        run: echo ${{ github.event.inputs.name }}
