@@ -10,3 +10,10 @@ jobs:
     steps:
       - name: First step
         run: echo "Hello world!"
+  
+    hello-world2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: First step2
+        run: echo "Hello world!"
