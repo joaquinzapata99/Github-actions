@@ -1,13 +1,18 @@
 name: Event PR - Single Job
 
 on:
-  label:
-    types: [created]
+  push:
+    branches:
+      - '*'
 
 jobs:
-  hello-world:
+  security-check:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hello world
-        run: echo "Hello world!"
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Run security checks
+        run: |
+          bandit -r code/python
