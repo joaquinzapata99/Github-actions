@@ -15,3 +15,9 @@ jobs:
     steps:
       - name: First step2
         run: echo "bye world!"
+
+  new-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Third step
+        run: echo "This is the new job!"
