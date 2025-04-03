@@ -58,4 +58,4 @@ jobs:
         with:
           context: code/python
           push: true
-          tags: user/app:latest
+          tags: joaquinzapata99/github-actions:latest
