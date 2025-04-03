@@ -1,0 +1,24 @@
+name: Event Commit - Single Job
+
+on:
+  push:
+    branches:
+      - '*'
+    workflow_dispatch:
+    inputs:
+      name:
+      description: 'Name'
+      required: true
+      default: 'World'
+    greeting:
+      description: 'Greeting'
+      required: true
+      default: 'Hello'
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: First step
+        run: echo "Hello world!"
